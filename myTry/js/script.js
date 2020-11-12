@@ -1,3 +1,4 @@
+// функция обработки нажатия на иконку меню
 menu.onclick = function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -6,5 +7,3 @@ menu.onclick = function myFunction() {
         x.className = "topnav";
     }
 }
-
-$('.carousel').carousel();
