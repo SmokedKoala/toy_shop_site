@@ -159,16 +159,25 @@ footer nav a:hover {
     border-bottom: 1px solid rgb(98, 0, 255);
 }
 
+
+/* стили для изображений соц. сетей в футере */
+
 .social img {
     /* margin-top: 10px; */
     margin-left: 10px;
     margin-bottom: 30px;
 }
 
+
+/* обработка наведения курсора на футер */
+
 .social img:hover {
     background: rgb(98, 0, 255);
     border-radius: 50%;
 }
+
+
+/* параметры контейнера изображений для вкладки markdown */
 
 .gallery {
     width: 80%;
@@ -179,11 +188,17 @@ footer nav a:hover {
     margin-top: 10px;
 }
 
+
+/* параметры контейнера изображения для вкладки markdown */
+
 .photo_item {
     width: 40%;
     margin-left: 5%;
     margin-bottom: 5%;
 }
+
+
+/* параметры изображения для вкладки markdown */
 
 .photo_item img {
     box-sizing: border-box;
@@ -192,9 +207,15 @@ footer nav a:hover {
     border-radius: 5%;
 }
 
+
+/* обработка наведения курсора на изображение для вкладки markdown */
+
 .photo_item img:hover {
     opacity: 100%;
 }
+
+
+/* параметры для заголовка */
 
 h3 a {
     margin-left: 100px;
@@ -204,9 +225,15 @@ h3 a {
     margin-bottom: 40px;
 }
 
+
+/* параметры для заголовка при наведении курсора */
+
 h3 a:hover {
     font-style: oblique;
 }
+
+
+/* параметры контейнера слайдера  */
 
 .slideshow-container {
     max-width: 90%;
@@ -214,9 +241,15 @@ h3 a:hover {
     margin: auto;
 }
 
+
+/* параметры слайда */
+
 .mySlides {
     margin-left: 15%;
 }
+
+
+/* параметры кнопок "вперёд" и "назад" для слайдера  */
 
 .prev,
 .next {
@@ -234,24 +267,111 @@ h3 a:hover {
     border-radius: 5%;
 }
 
+
+/* параметры для кнопки "вперёд" */
+
 .next {
     right: 0;
 }
+
+
+/* параметры кнопок "вперёд" и "назад" при наведении курсора */
 
 .prev:hover,
 .next:hover {
     background-color: rgb(98, 0, 255);
 }
 
-.active {
-    background-color: rgb(44, 43, 43);
-}
+
+/* присвоение анимации постепенной смены цвета*/
 
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
     animation-name: fade;
 }
+
+.blocks-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin-left: 10%;
+}
+
+.toy-container {
+    background: rgb(245, 241, 179);
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
+    font-weight: 100;
+    margin-left: 10px;
+    width: 25%;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.block-cover img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.toy-container a:hover {
+    border-color: seagreen;
+}
+
+.block-cover {
+    border-radius: 5%;
+    height: 15rem;
+    box-shadow: inset rgba(0, 0, 0, 0.2);
+}
+
+.block-body {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.block-tytle h1 a {
+    color: tomato;
+    font-weight: 100;
+}
+
+.block-tags ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.block-tags li {
+    margin-right: 0.5rem;
+}
+
+.block-tags a {
+    border: 1px solid #999999;
+    border-radius: 5%;
+    color: #999999;
+    font-size: 0.75rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    padding: 0 0.5rem;
+    text-align: center;
+    white-space: nowrap;
+    width: 5rem;
+}
+
+.block-footer p {
+    display: flex;
+    flex: row wrap;
+    justify-content: flex-end;
+    padding-right: 3%;
+}
+
+
+/* настройка анимации постепенной смены цвета*/
 
 @keyframes fade {
     from {
@@ -301,6 +421,9 @@ h3 a:hover {
         width: 45%;
         margin-left: 10px;
     }
+    .toy-container {
+        width: 45%;
+    }
 }
 
 
@@ -325,5 +448,11 @@ h3 a:hover {
     .photo_item {
         width: 70%;
         margin: 0 auto;
+    }
+    .blocks-container {
+        flex-direction: column;
+    }
+    .toy-container {
+        width: 100%;
     }
 }
