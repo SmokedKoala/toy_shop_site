@@ -14,7 +14,7 @@ li {
 
 body {
     font-family: 'Pacifico', cursive;
-    background: rgb(216, 216, 216);
+    background: rgb(231, 230, 230);
 }
 
 
@@ -291,67 +291,64 @@ h3 a:hover {
     animation-name: fade;
 }
 
-.blocks-container {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-bottom: 10px;
-    margin-left: 10%;
-}
 
-.toy-container {
-    background: rgb(245, 241, 179);
+/* настройка блока новостей сайта для страницы blog */
+
+.blog-container {
+    background: rgb(255, 250, 241);
     border-radius: 5%;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
+    box-shadow: rgba(0, 0, 0, 0.2);
     font-weight: 100;
-    margin-left: 10px;
-    width: 25%;
-    box-sizing: border-box;
-    max-width: 100%;
-    margin-bottom: 10px;
+    margin: 48px auto;
+    width: 50rem;
 }
 
-.block-cover img {
-    width: 100%;
+.blog-container a:hover {
+    color: red;
+}
+
+.blog-cover {
+    background-size: cover;
     border-radius: 5%;
-}
-
-.toy-container a:hover {
-    border-color: seagreen;
-}
-
-.block-cover {
-    border-radius: 5%;
-    height: 15rem;
+    height: auto;
     box-shadow: inset rgba(0, 0, 0, 0.2);
 }
 
-.block-body {
+.blog-cover img {
+    width: 100%;
+}
+
+.blog-body {
     margin: 0 auto;
     width: 80%;
-    text-align: center;
 }
 
-.block-tytle h1 a {
-    color: tomato;
+.blog-title h1 a {
+    color: royalblue;
     font-weight: 100;
+    font-size: 26px;
 }
 
-.block-tags ul {
+.blog-text p {
+    color: seagreen;
+    font-size: 20px;
+}
+
+.blog-tags ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    list-style: none;
     padding-left: 0;
 }
 
-.block-tags li {
-    margin-right: 0.5rem;
+.blog-tags li {
+    margin-right: 2rem;
 }
 
-.block-tags a {
-    border: 1px solid #999999;
-    border-radius: 5%;
+.blog-tags a {
+    border: 1px solid wheat;
+    border-radius: 3px;
     color: #999999;
     font-size: 0.75rem;
     height: 1.5rem;
@@ -363,11 +360,28 @@ h3 a:hover {
     width: 5rem;
 }
 
-.block-footer p {
+.blog-footer {
+    border-top: 1px solid #e6e6e6;
+    margin: 0 auto;
+    padding-bottom: 0.125rem;
+    width: 80%;
+}
+
+.blog-footer ul {
+    list-style: none;
     display: flex;
     flex: row wrap;
     justify-content: flex-end;
-    padding-right: 3%;
+    padding-left: 0;
+}
+
+.blog-footer li {
+    color: #999999;
+    font-size: 0.75rem;
+    height: 1.5rem;
+    text-align: center;
+    position: relative;
+    white-space: nowrap;
 }
 
 
@@ -401,6 +415,7 @@ h3 a:hover {
     /* сдвиг элементов меню  */
     .topnav.responsive {
         position: relative;
+        z-index: 2;
     }
     /* присвоение позиции для иконки меню */
     .topnav.responsive a.icon {
@@ -423,6 +438,9 @@ h3 a:hover {
     }
     .toy-container {
         width: 45%;
+    }
+    .blog-container {
+        width: 28rem;
     }
 }
 
@@ -454,5 +472,15 @@ h3 a:hover {
     }
     .toy-container {
         width: 100%;
+    }
+    .blog-container {
+        width: 20rem;
+    }
+    .blog-title h1 a {
+        font-size: 22px;
+    }
+    .blog-text p {
+        color: seagreen;
+        font-size: 16px;
     }
 }
