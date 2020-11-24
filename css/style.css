@@ -14,7 +14,7 @@ li {
 
 body {
     font-family: 'Pacifico', cursive;
-    background: rgb(231, 230, 230);
+    background: rgb(190, 224, 255);
 }
 
 
@@ -119,9 +119,10 @@ nav {
 
 .toy_kind {
     width: 30%;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(214, 214, 214);
     margin-bottom: 10px;
     border-radius: 5%;
+    border: 2px solid green;
 }
 
 .toy_kind img {
@@ -397,9 +398,111 @@ h3 a:hover {
 }
 
 
-/* описание для экранов по ширине меньше, чем 700 px */
+/* стилизация поля поиска */
 
-@media(max-width: 800px) {
+.search {
+    background: #A3D0C3;
+    width: 90%;
+    position: relative;
+    margin-left: 5%;
+}
+
+.search input {
+    height: 42px;
+    width: 100%;
+    padding-left: 10px;
+    border: 2px solid #7BA7AB;
+    border-radius: 5px;
+    outline: none;
+    background: #F9F0DA;
+    color: green;
+}
+
+.search button {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 42px;
+    height: 100%;
+    border: none;
+    background: green;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: white;
+}
+
+.search button:before {
+    /* font-family: FontAwesome;
+    content: "\f002"; */
+    font-size: 16px;
+    color: #F9F0DA;
+}
+
+
+/* стилизация блоков игрушек каталога товаров для toys */
+
+.goods {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.toy {
+    width: auto;
+    background-color: rgb(214, 214, 214);
+    border: 1px solid green;
+    margin: 10px;
+    text-align: center;
+    max-width: 90%;
+    border-radius: 5%;
+}
+
+.toy img {
+    width: 99%;
+    border-radius: 5%;
+}
+
+.toy p {
+    width: 100%;
+    font-size: 14px;
+}
+
+.toy button {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: green;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border: 2px solid green;
+}
+
+.toy button:hover {
+    background: white;
+    color: green;
+}
+
+.price {
+    color: red;
+    font-size: 16px;
+}
+
+
+/* описание для экранов по ширине меньше, чем 1050 px */
+
+@media(max-width: 1050px) {
+    .goods {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* описание для экранов по ширине меньше, чем 815 px */
+
+@media(max-width: 815px) {
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -442,10 +545,16 @@ h3 a:hover {
     .blog-container {
         width: 28rem;
     }
+    h3 a {
+        font-size: 30px;
+    }
+    .goods {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 
-/* обработка варианта, когда экран меньше 585px */
+/* обработка варианта, когда экран меньше 600px */
 
 @media(max-width: 600px) {
     .toy_kinds {
@@ -482,5 +591,9 @@ h3 a:hover {
     .blog-text p {
         color: seagreen;
         font-size: 16px;
+    }
+    .goods {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 5%;
     }
 }

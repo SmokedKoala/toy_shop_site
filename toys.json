@@ -1,0 +1,44 @@
+{
+    "12345": {
+        "name": "оцелот",
+        "cost": "335",
+        "description": "мягкая игрушка оцелота из игры minecraft",
+        "image": "img/toy_image1.jpg"
+    },
+    "12346": {
+        "name": "Стич",
+        "cost": "275",
+        "description": "мягкая игрушка Стича из одноименного мультфильма",
+        "image": "img/toy_image2.jpg"
+    },
+    "12347": {
+        "name": "Коржик",
+        "cost": "250",
+        "description": "мягкая игрушка Коржика из мультфильма Три Кота ",
+        "image": "img/toy_image3.jpg"
+    },
+    "12348": {
+        "name": "Зайка",
+        "cost": "500",
+        "description": "мягкая игрушка зайки, обнимающего сердце",
+        "image": "img/toy_image4.jpg"
+    },
+    "12349": {
+        "name": "набор Doorables",
+        "cost": "1000",
+        "description": "кукольный набор Dorables с перонажем и домиком",
+        "image": "img/toy_image5.jpg"
+    },
+    "12350": {
+        "name": "Гравити Фолз",
+        "cost": "750",
+        "description": "настольная игра Гравити Фолз на 4 человек",
+        "image": "img/toy_image6.jpg"
+    },
+    "12351": {
+        "name": "Деревня жителей",
+        "cost": "",
+        "description": "lego набор деревни жителей игры minecraft",
+        "image": "img/toy_image7.jpg"
+    }
+}
