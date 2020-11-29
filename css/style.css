@@ -13,7 +13,7 @@ li {
 }
 
 body {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Balsamiq Sans', cursive;
     background: rgb(190, 224, 255);
 }
 
@@ -21,7 +21,7 @@ body {
 /* настройка лого */
 
 .logo {
-    background: greenyellow;
+    background: rgb(51, 241, 34);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -136,7 +136,7 @@ nav {
 footer {
     width: 100%;
     height: auto;
-    background: greenyellow;
+    background: rgb(51, 241, 34);
     margin: 0 auto;
     text-align: center;
     padding-top: 50px;
@@ -404,12 +404,12 @@ h3 a:hover {
     background: #A3D0C3;
     width: 90%;
     position: relative;
-    margin-left: 5%;
+    margin: 20px auto;
 }
 
 .search input {
     height: 42px;
-    width: 100%;
+    width: 95%;
     padding-left: 10px;
     border: 2px solid #7BA7AB;
     border-radius: 5px;
@@ -422,7 +422,7 @@ h3 a:hover {
     position: absolute;
     top: 0;
     right: 0px;
-    width: 42px;
+    width: 5%;
     height: 100%;
     border: none;
     background: green;
@@ -431,9 +431,9 @@ h3 a:hover {
     color: white;
 }
 
-.search button:before {
-    /* font-family: FontAwesome;
-    content: "\f002"; */
+.search button::before {
+    font-family: FontAwesome;
+    content: "\f002";
     font-size: 16px;
     color: #F9F0DA;
 }
@@ -481,13 +481,132 @@ h3 a:hover {
 }
 
 .toy button:hover {
-    background: white;
-    color: green;
+    border: 2px solid white;
 }
 
 .price {
     color: red;
     font-size: 16px;
+}
+
+
+/* стилизация элементов shopping_basket */
+
+.shopping_basket {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
+
+.goods-container {
+    width: 110%;
+    margin: 5% 10%;
+    background: white;
+    height: auto;
+    border: 1px solid green;
+    border-radius: 5%;
+}
+
+.block-buy {
+    width: 50%;
+    margin: auto 30% 5%;
+    padding-left: 3%;
+    background: white;
+    height: auto;
+    border: 1px solid green;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.block-buy-footer {
+    border-top: 1px solid blue;
+    width: 95%;
+}
+
+.block-buy h2 {
+    margin: auto;
+}
+
+.pay-button {
+    margin: 5% auto;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    width: 10em;
+    height: 2.5em;
+    line-height: 2.5em;
+    vertical-align: middle;
+    text-align: center;
+    color: orangered;
+    outline: none;
+    background: white;
+    border: 2px solid orangered;
+    border-radius: 5%;
+}
+
+.pay-button:hover {
+    background: orangered;
+    color: white;
+}
+
+#message {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    display: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.bought-toy {
+    width: 98%;
+    height: auto;
+    margin: 1% auto;
+    border: 1px solid grey;
+    border-radius: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+}
+
+.bought-toy img {
+    width: 100%;
+    border-radius: 55;
+    margin: 2% 2% 2% 2%;
+}
+
+.name-of-bought-toy {
+    margin: auto 10%;
+    font-size: 30px;
+}
+
+.price-of-bought-toy {
+    margin: auto 0;
+    font-style: initial;
+}
+
+.bought-toy button {
+    display: inline-block;
+    padding: 5%;
+    margin-top: 25%;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid orangered;
+    border-radius: 5%;
+    color: orangered;
+    background: white;
+}
+
+.bought-toy button:hover {
+    color: white;
+    background: orangered;
+}
+
+.bought-toy p {
+    display: inline-block;
+    padding: 5%;
+    margin-top: 25%;
+    font-size: 25px;
 }
 
 
@@ -549,14 +668,28 @@ h3 a:hover {
         font-size: 30px;
     }
     .goods {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .search button {
+        width: 7%;
+    }
+    .shopping_basket {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .goods-container {
+        width: 90%;
+        margin: auto;
+    }
+    .block-buy {
+        width: 87%;
+        margin: 5% auto 5%;
     }
 }
 
 
-/* обработка варианта, когда экран меньше 600px */
+/* обработка варианта, когда экран меньше 630px */
 
-@media(max-width: 600px) {
+@media(max-width: 630px) {
     .toy_kinds {
         flex-direction: column;
     }
@@ -594,6 +727,12 @@ h3 a:hover {
     }
     .goods {
         grid-template-columns: repeat(1, 1fr);
-        margin-left: 5%;
+        margin-left: 20%;
+    }
+    .toy {
+        width: 60%;
+    }
+    .search button {
+        width: 10%;
     }
 }

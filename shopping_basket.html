@@ -7,10 +7,10 @@
     <link rel="stylesheet" href='css/style.css'>
     <!-- ссылка на шрифт -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="show_current_price(0)">
     <header>
         <!-- класс logo -->
         <div class="logo">
@@ -30,7 +30,40 @@
     </header>
     <main>
         <div class="shopping_basket">
+            <div class="goods-container">
+                <h1 id="message">В корзине пусто!</h1>
+                <div class="bought-toy">
+                    <img class="img-for-basket" src="img/toy_image1.jpg" alt="">
+                    <a href="#" class="name-of-bought-toy">Оцелот</a>
+                    <p class="price-of-bought-toy">335 руб</p>
+                    <div class="number">
+                        <button onclick="basket_counter('toys_number1',-335,-1)">-</button>
+                        <p id="toys_number1">1</p>
+                        <button onclick="basket_counter('toys_number1',335,1)">+</button>
+                    </div>
+                </div>
+                <div class="bought-toy">
+                    <img class="img-for-basket" src="img/toy_image2.jpg" alt="">
+                    <a href="#" class="name-of-bought-toy">Стич</a>
+                    <p class="price-of-bought-toy">275 руб</p>
+                    <div class="number">
+                        <button onclick="basket_counter('toys_number2',-275,-1)">-</button>
+                        <p id="toys_number2">1</p>
+                        <button onclick="basket_counter('toys_number2',275,1)">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="block-buy">
 
+                <h2>К оплате:</h2>
+                <h2 id="sum">610</h2>
+                <div class="block-buy-footer">
+                    <button class="pay-button">
+                    Оплатить
+                    </button>
+                </div>
+
+            </div>
         </div>
     </main>
     <!-- создание футера -->
