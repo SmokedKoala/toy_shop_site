@@ -1,4 +1,4 @@
-// функция обработки нажатия на иконку меню
+// функция настройки на иконку меню
 menu.onclick = function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -49,7 +49,6 @@ function imgChange(n) {
 
 function show_current_price(changes) {
     var price = parseInt(document.getElementById('sum').textContent) + changes;
-    // console.log(price);
     document.getElementById('sum').innerHTML = price + " руб";
 }
 
