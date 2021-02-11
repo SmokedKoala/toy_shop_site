@@ -1,13 +1,16 @@
 // функция обработки нажатия на иконку меню
 menu.onclick = function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += "  responsive";
-        } else {
-            x.className = "topnav";
-        }
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += "  responsive";
+    } else {
+        x.className = "topnav";
     }
-    // функционал карусели на главном экране
+}
+
+
+
+// функционал карусели на главном экране
 var slideIndex = 1;
 showSlides(slideIndex);
 
